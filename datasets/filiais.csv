@@ -1,7 +1,7 @@
 ;estado;cidade;vendedores
-0;RS;Porto Alegre;['Rodrigo Tadewald', 'Luiza Cherobini']
-1;RS;Canoas;['Carlos Henrique', 'Luis Fernando']
-2;RS;Caxias do Sul;['Rodrigo Vanzeloti', 'Mateus Kienzle']
-3;RS;Lajeado;['Adriano Soares', 'Juliano Faccioni']
-4;SC;Florianópolis;['Claudia dos Santos', 'Mario Sérgio']
-5;SP;São Paulo;['Claudio Bueno', 'Cassia Moraes']
+0;CE;Fortaleza;['Rosana Sad', 'Lucas Oliveira']
+1;MG;Juiz de Fora;['Marcell Felipe', 'Fabiana de Araujo']
+2;SP;Guarulhos;['Emilly Araujo', 'Marcelle Oliveira']
+3;ES;Marataizes;['Orlando Lero', 'Vini Gonzalez']
+4;RJ;Niteroi;['Claudia Raia', 'Shadwick Boseman']
+5;SP;Vinhedo;['Claudio Burque', 'Cassia Eller']
