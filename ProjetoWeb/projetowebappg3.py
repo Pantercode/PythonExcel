@@ -6,7 +6,7 @@ from datetime import datetime
 pasta_datasets = Path(__file__).parent.parent / 'datasets'
 
 # Lendo os datasets
-df_vendas = pd.read_csv(pasta_datasets / 'vendas.csv', sep=';', decimal=',', index_col=0)
+df_vendas = pd.read_excel(pasta_datasets / 'vendas.xlsx', decimal=',', index_col=0)
 
 # Lendo os datasets de filia
 df_filiais = pd.read_csv(pasta_datasets / 'filiais.csv', sep=';', decimal=',')

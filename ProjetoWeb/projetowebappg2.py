@@ -6,7 +6,8 @@ import streamlit as st
 pasta_datasets = Path(__file__).parent.parent / 'datasets'
 
 # Lendo os datasets
-df_vendas = pd.read_csv(pasta_datasets / 'vendas.csv', sep=';', decimal=',', index_col=0)
+df_vendas = pd.read_excel(pasta_datasets / 'vendas.xlsx', decimal=',', index_col=0)
+
 
 # Criando uma lista com as colunas do DataFrame
 colunas = list(df_vendas.columns)
