@@ -46,7 +46,7 @@ genero_selecionada = st.sidebar.selectbox('Selecione o Genero:' ,
 
 
 forma_de_pagamento_selecionada = st.sidebar.selectbox('Selecione a forma de Pagamento:' , 
-                                          ['Boleto', 'Pix','Credito','Debito','Cheque'])
+                                          ['boleto', 'pix','credito','Debito'])
 
 if st.sidebar.button('Adicionar nova Venda'):
     lista_adicionar = [df_vendas['id_venda'].max() + 1,
@@ -62,3 +62,5 @@ if st.sidebar.button('Adicionar nova Venda'):
 
 
 st.dataframe(df_vendas,height=600, width=1200)
+
+
