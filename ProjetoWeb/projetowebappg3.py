@@ -1,7 +1,7 @@
 from pathlib import Path
 import pandas as pd
 import streamlit as st
-from datetime import datetime
+import datetime
 # Buscando o caminho das pastas
 pasta_datasets = Path(__file__).parent.parent / 'datasets'
 
@@ -48,19 +48,28 @@ genero_selecionada = st.sidebar.selectbox('Selecione o Genero:' ,
 forma_de_pagamento_selecionada = st.sidebar.selectbox('Selecione a forma de Pagamento:' , 
                                           ['boleto', 'pix','credito','Debito'])
 
+
+
 if st.sidebar.button('Adicionar nova Venda'):
-    lista_adicionar = [df_vendas['id_venda'].max() + 1,
-                   filial_selecionada,
-                   vendedor_selecionada,
-                   produtos_selecionada,
-                   nome_cliente,
-                   genero_selecionada,
-                   forma_de_pagamento_selecionada]
-    df_vendas.loc[datetime.datetime.now()] = lista_adicionar
-    df_vendas.to_csv(pasta_datasets / 'vendas.csv', sep=';')
-    st.success('Venda adicionada com sucesso!')
+    lista_adicionar = [
+        df_vendas['id_venda'].max() + 1,  # Garante o incremento do ID
+        filial_selecionada,
+        vendedor_selecionada,
+        produtos_selecionada,
+        nome_cliente,
+        genero_selecionada,
+        forma_de_pagamento_selecionada,
+        datetime.datetime.now()  # Adiciona a data/hora atual
+    ]
 
+    # Assegure-se de que a lista tenha o mesmo número de elementos que o número de colunas
+    if len(lista_adicionar) == len(df_vendas.columns):
+        df_vendas.loc[len(df_vendas)] = lista_adicionar  # Adiciona a linha no final do DataFrame
+        df_vendas.to_csv(pasta_datasets / 'vendas.csv', sep=';')
+        st.success('Venda adicionada com sucesso!')
+    else:
+        st.error("Número de itens não corresponde ao número de colunas do DataFrame.")
 
-st.dataframe(df_vendas,height=600, width=1200)
+st.dataframe(df_vendas, height=600, width=1200)
 
 
