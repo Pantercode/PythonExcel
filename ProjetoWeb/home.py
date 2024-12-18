@@ -1,7 +1,7 @@
 import streamlit as st
 
 # Adicionando imagem na barra lateral
-st.sidebar.image('C:\\Users\\marcell.oliveira\\Desktop\\pythoexcel\\1652501565743.jpg', caption='Marcell Felipe')
+st.sidebar.image(r'C:\Users\marcell.oliveira\Desktop\pythoexcel\PythonExcel\ProjetoWeb\1652501565743.jpg', caption='Marcell Felipe')
 
 # Adicionando link na barra lateral
 st.sidebar.markdown('Desenvolvido por [Marcell Felipe](https://www.linkedin.com/in/marcell-felipe-de-paula-oliveira-219525199/)')
