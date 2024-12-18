@@ -1,9 +1,15 @@
 from pathlib import Path
 from datetime import date, timedelta
-
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import streamlit as st
+
+def show_page():
+    st.markdown("## Página 6")
+    st.write("Conteúdo da Página 6")
+
+
 
 PERCENTUAL_COMISSAO = 0.08
 COLUNAS_ANALISE = ['filial', 'vendedor', 'produto']

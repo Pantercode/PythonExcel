@@ -3,6 +3,11 @@ import streamlit as st
 from pathlib import Path
 from datetime import timedelta, datetime
 import os
+import streamlit as st
+
+def show_page():
+    st.markdown("## Página 4")
+    st.write("Conteúdo da Página 4")
 
 # Configuração da página do Streamlit
 st.set_page_config(page_title="Dashboard de Vendas", layout="wide")

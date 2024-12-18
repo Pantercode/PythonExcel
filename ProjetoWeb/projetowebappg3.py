@@ -2,6 +2,12 @@ from pathlib import Path
 import pandas as pd
 import streamlit as st
 import datetime
+import streamlit as st
+
+def show_page():
+    st.markdown("## Página 3")
+    st.write("Conteúdo da Página 3")
+
 # Buscando o caminho das pastas
 pasta_datasets = Path(__file__).parent.parent / 'datasets'
 

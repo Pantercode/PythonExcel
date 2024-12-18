@@ -1,4 +1,10 @@
 import streamlit as st
+from projetowebappg1 import show_page as page1
+from projetowebappg2 import show_page as page2
+from projetowebappg3 import show_page as page3
+from projetowebappg4 import show_page as page4
+from projetowebappg5 import show_page as page5
+from projetowebappg6 import show_page as page6
 
 # Adicionando imagem na barra lateral
 st.sidebar.image(r'C:\Users\marcell.oliveira\Desktop\pythoexcel\PythonExcel\ProjetoWeb\1652501565743.jpg', caption='Marcell Felipe')
@@ -6,23 +12,31 @@ st.sidebar.image(r'C:\Users\marcell.oliveira\Desktop\pythoexcel\PythonExcel\Proj
 # Adicionando link na barra lateral
 st.sidebar.markdown('Desenvolvido por [Marcell Felipe](https://www.linkedin.com/in/marcell-felipe-de-paula-oliveira-219525199/)')
 
-# Título principal
-st.markdown('# Bem-vindo ao Analisador de Vendas')
+# Menu de navegação
+st.sidebar.title("Navegação")
+page = st.sidebar.radio("Escolha a página:", 
+                        ["Home", "Página 1", "Página 2", "Página 3", "Página 4", "Página 5", "Página 6"])
 
-# Divisor
-st.divider()
+# Página principal
+if page == "Home":
+    st.markdown("# Página Inicial")
+    st.write("Bem-vindo ao aplicativo principal. Use o menu lateral para navegar.")
 
-# Descrição do projeto
-st.markdown(
-    '''
-    Esse projeto tem por finalidade demonstrar toda a capacidade do Python usando Streamlit.
+# Chamando as funções das páginas
+elif page == "Página 1":
+    page1()
 
-    Utilizaremos três principais bibliotecas para o seu desenvolvimento:
+elif page == "Página 2":
+    page2()
 
-    - `pandas`: para manipulação de dados em tabelas
-    - `plotly`: para geração de gráficos
-    - `streamlit`: para criação desse webApp interativo que você se encontra nesse momento
+elif page == "Página 3":
+    page3()
 
-    Os dados utilizados foram gerados pelo script 'gerador_de_vendas.py' que se encontra junto do código fonte do projeto. Os dados podem ser visualizados na aba de tabelas!
-    '''
-)
+elif page == "Página 4":
+    page4()
+
+elif page == "Página 5":
+    page5()
+
+elif page == "Página 6":
+    page6()
