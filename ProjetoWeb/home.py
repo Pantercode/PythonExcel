@@ -1,15 +1,21 @@
 import streamlit as st
 
+# Adicionando imagem na barra lateral
+st.sidebar.image('C:\\Users\\marcell.oliveira\\Desktop\\pythoexcel\\1652501565743.jpg', caption='Marcell Felipe')
 
-st.sidebar.markdown('Desenvolvido por [Marcell Felipe](https://asimov.academy/)')
+# Adicionando link na barra lateral
+st.sidebar.markdown('Desenvolvido por [Marcell Felipe](https://www.linkedin.com/in/marcell-felipe-de-paula-oliveira-219525199/)')
 
+# Título principal
 st.markdown('# Bem-vindo ao Analisador de Vendas')
 
+# Divisor
 st.divider()
 
+# Descrição do projeto
 st.markdown(
     '''
-    Esse projeto foi desenvolvido como projeto final do curso ***Python para Usuários de Excel***.
+    Esse projeto tem por finalidade demonstrar toda a capacidade do Python usando Streamlit.
 
     Utilizaremos três principais bibliotecas para o seu desenvolvimento:
 
@@ -18,7 +24,5 @@ st.markdown(
     - `streamlit`: para criação desse webApp interativo que você se encontra nesse momento
 
     Os dados utilizados foram gerados pelo script 'gerador_de_vendas.py' que se encontra junto do código fonte do projeto. Os dados podem ser visualizados na aba de tabelas!
-
-    Sugestões podem ser enviadas para o email contato@asimov.academy ou diretamente na nossa [comunidade](https://discord.gg/xsRU2Ay9tA).
     '''
-            )
+)
